@@ -9,10 +9,14 @@ Install [Polymer CLI](https://github.com/Polymer/polymer-cli) using
 
     npm install -g polymer-cli@next
 
+### Install the libraries
+From the folder \<path-checked-out-to>\todo-app run the command:
+    npm install
 
 ### Start the development server
 
-This command serves the app at `http://127.0.0.1:8081` and provides basic URL
-routing for the app:
-
+From the folder \<path-checked-out-to>\todo-app run the command:
     npm start
+    
+### Access the app
+Enter  `http://127.0.0.1:8081` into your browser.
