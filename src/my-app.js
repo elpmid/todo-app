@@ -51,7 +51,7 @@ class MyApp extends PolymerElement {
 
         app-header {
           color: #fff;
-          background-color: var(--app-primary-color);
+            background: linear-gradient(to bottom right, blue, pink);
         }
 
         app-header paper-icon-button {
@@ -60,8 +60,19 @@ class MyApp extends PolymerElement {
 
         .drawer-list {
           margin: 0 20px;
+          text-decoration: underline;
         }
 
+        app-drawer-layout {
+            --app-drawer-layout-content-transition: margin 0.2s;
+        }
+    
+        app-drawer {
+            --app-drawer-content-container: {
+                background: linear-gradient(to bottom right, blue, pink);
+                 }
+        }
+        
         .drawer-list a {
           display: block;
           padding: 0 16px;
@@ -74,7 +85,7 @@ class MyApp extends PolymerElement {
           color: black; 
           font-weight: bold;
         }
-               
+           
       </style>
 
       <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
@@ -86,7 +97,7 @@ class MyApp extends PolymerElement {
       <app-drawer-layout fullbleed="" narrow="{{narrow}}">
         <!-- Drawer content -->
         <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
-          <app-toolbar>Menu</app-toolbar>
+          <app-toolbar style="font-weight: bold;">Menu</app-toolbar>
           <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
             <a name="todoListVew" href="[[rootPath]]todoListView">Todo List</a>
           </iron-selector>

@@ -22,23 +22,46 @@ class TodoItem extends PolymerElement {
           display: block;
           padding: 10px;
         }
-        .align-right {
-            text-align: right;
-        }
+     
         .todo-header { @apply(--paper-font-headline); }
         .todo-light { color: var(--paper-grey-600); }
+                
+         .boxHoizonal {
+            display: flex;
+          }
+      
+          .boxVertical {
+            display: flex;
+            flex-direction: column;
+          }
+       
+         .wrap div:last-child {
+            margin-left: auto;
+          }
+        
+      .colorbox {background: #ffcc00; }
+        
         </style>
 
         <todo-create-view id="todoCreateView" todo-id="{{todoId}}" name="{{name}}" description="{{description}}" status="{{status}}" due="{{due}}" creating="UPDATE"></todo-create-view>  
       
         <div class="card">
-            <div class="todo-header"">Name: {{name}}</div>
-            <p class="todo-light">{{todoId}}</p>
-            <p class="todo-light">{{description}}</p>
-            <p class="todo-light">{{status}}</p>
-            <p class="todo-light">{{due}}</p>
-            <div class="card-actions">
-                <paper-button class="paper-button-indigo" on-click="toggleDialog">Edit</paper-button>
+            <div class="boxHoizonal wrap">
+                <div class="todo-header">Name: {{name}}</div>
+                <div class="todo-light">{{status}}</div>
+             </div>
+             
+             
+             <div class="boxVertical wrap">
+                <div class="todo-light" style="margin-bottom:15px;">{{description}}</div>
+           
+                <div class="todo-light" style="" >
+                   Date due: {{due}}
+                </div>
+              
+                <div class="card-actions">
+                    <paper-button class="paper-button-indigo" on-click="toggleDialog">Edit</paper-button>
+                 </div>
              </div>
         </div>
     `;

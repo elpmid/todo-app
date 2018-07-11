@@ -31,6 +31,7 @@ class TodoListView extends PolymerElement {
           display: block;
           padding: 10px;
         }
+                
       </style>
       
       <get-todo-service id="getTodoService" todo-list="{{todoList}}" loading="{{loading}}"></get-todo-service>

@@ -43,9 +43,9 @@ export class TodoCreateView extends PolymerElement {
             <div>
                 <iron-form id="formSave">
                 <form>
-                <paper-input floatingLabel autofocus label="Name" id="name" value="{{name}}" maxlength="20" required auto-validate error-message="Name must be entered."></paper-input>
+                <paper-input floatingLabel autofocus label="Name" id="name" value="{{name}}" maxlength="20" required error-message="Name must be entered."></paper-input>
                 <br>
-                <paper-textarea floatingLabel label="Description" id="description" value="{{description}}" maxlength="1000" required auto-validate error-message="Description must be entered."></paper-textarea>
+                <paper-textarea floatingLabel label="Description" id="description" value="{{description}}" maxlength="1000" required error-message="Description must be entered."></paper-textarea>
                 <br>
                 <paper-dropdown-menu label="Status" vertical-align="top" horizontal-align="left" required error-message="Status must be entered.">
                     <paper-listbox slot="dropdown-content" class="dropdown-content" attr-for-selected="name" selected="{{status}}">
